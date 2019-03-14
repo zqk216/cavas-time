@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+<body>
+	<div>
+		<a href="play.html" id="fly">
+			关卡<span id="leave">1</span>
+		</a>
+	</div>
+
+	<script type="text/javascript">
+		var leave = parseInt(window.location.href.split('#')[1]);
+		if (leave) {
+			if (leave == 8) {
+				leave = 0;
+			}
+			document.getElementById('leave').innerHTML = leave + 1;
+			document.getElementById('fly').setAttribute('href','play.html#'+leave); 
+		}
+	</script>
+</body>
+</html>
